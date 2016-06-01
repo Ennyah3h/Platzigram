@@ -1,7 +1,7 @@
 var yo = require('yo-yo');
 var landing = require('../landing');
 
-vr signinForm = `<div class="col s12 m7">
+var signinForm = yo`<div class="col s12 m7">
   <div class="row">
     <div class="signup-box">
       <h1 class="platzigram">Platzigram</h1>
@@ -21,7 +21,7 @@ vr signinForm = `<div class="col s12 m7">
   </div>
   <div class="row">
     <div class="login-box">
-      ¿Tienes una cuenta? <a href="/signin">Registrate</a>
+      ¿No tienes una cuenta? <a href="../signup">Registrate</a>
     </div>
   </div>
 </div>`;

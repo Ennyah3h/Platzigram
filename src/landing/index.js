@@ -1,6 +1,6 @@
 var yo = require('yo-yo');
 
-module.exports = function lnding(box) {
+module.exports = function landing(box) {
   return yo`<div class="container">
     <div class="row">
       <div class="col s10 push-s1">
