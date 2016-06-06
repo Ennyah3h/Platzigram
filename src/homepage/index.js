@@ -6,5 +6,27 @@ var title = require('title');
 page('/', function (ctx, next) {
   title('Platzigram');
   var main = document.getElementById('main-container');
-  empty(main).appendChild(template);
+
+  var pictures = [
+    {
+      user: {
+        username: 'Ennyah3h',
+        avatar: 'avatar.jpeg'
+      },
+      url: 'office.jpg',
+      likes: 10,
+      liked: false
+    },
+    {
+      user: {
+        username: 'Ennyah3h',
+        avatar: 'avatar.jpeg'
+      },
+      url: 'office.jpg',
+      likes: 2,
+      liked: false
+    }
+  ];
+
+  empty(main).appendChild(template(pictures));
 })
