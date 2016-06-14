@@ -1,6 +1,6 @@
 var yo = require('yo-yo');
 var landing = require('../landing');
-var tranlate = require('../tranlate');
+var translate = require('../translate');
 
 var signupForm = yo`<div class="col s12 m7">
   <div class="row">
@@ -13,7 +13,7 @@ var signupForm = yo`<div class="col s12 m7">
             ${translate.message('signup.facebook')}
           </a>
           <a class="btn btn-fb hide-on-med-and-up"><i class="fa fa-facebook-official">
-            ${tranlate.message('signup.text')}
+            ${translate.message('signup.text')}
           </a>
         </div>
         <div class="divider"></div>
@@ -23,7 +23,7 @@ var signupForm = yo`<div class="col s12 m7">
           <input type="text" name="username" placeholder="${translate.message('username')}" />
           <input type="password" name="password" placeholder="${translate.message('password')}" />
           <button class="btn waves-effect waves-light btn-signup" type="submit">
-            ${translate.message('signup.call-to.action')}
+            ${translate.message('signup.call-to-action')}
           </button>
         </div>
       </form>
@@ -31,7 +31,7 @@ var signupForm = yo`<div class="col s12 m7">
   </div>
   <div class="row">
     <div class="login-box">
-      ${translate.message('signin.have-account')} <a href="../signin">${translate.message('Signin')}</a>
+      ${translate.message('signup.have-account')} <a href="/signin">${translate.message('signin')}</a>
     </div>
   </div>
 </div>`;
