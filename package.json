@@ -11,6 +11,7 @@
   ],
   "author": "platzi",
   "dependencies": {
+    "axios": "^0.12.0",
     "empty-element": "^1.0.0",
     "express": "^4.13.4",
     "intl": "^1.2.4",
@@ -19,6 +20,7 @@
     "materialize-css": "^0.97.6",
     "page": "^1.7.1",
     "pug": "^2.0.0-alpha8",
+    "superagent": "^2.0.0",
     "title": "^1.0.0",
     "yo-yo": "^1.2.0"
   },
