@@ -12,42 +12,42 @@ page('/', header, asyncLoad, function (ctx, next) {
 
   empty(main).appendChild(template(ctx.pictures));
 })
-//
-// function loadPictures(ctx, next) {
-//   request
-//     .get('/api/pictures')
-//     .end(function (err, res) {
-//       if (err) return console.log(err);
-//       ctx.pictures = res.body;
-//       next();
-//     })
-// }
-//
-// function loadPicturesAxios(ctx, next) {
-//   axios
-//     .get('/api/pictures')
-//     .then(function (res) {
-//       ctx.pictures = res.data;
-//       next();
-//     })
-//     .catch(function (err) {
-//       console.log(err);
-//     })
-// }
-//
-// function loadPicturesFetch(ctx, next) {
-//   fetch('/api/pictures')
-//     .then(function (res) {
-//       return res.json();
-//     })
-//     .then(function (pictures) {
-//       ctx.pictures = pictures;
-//       next()
-//       .catch(function (err) {
-//         console.log(err);
-//       })
-//     })
-// }
+
+function loadPictures(ctx, next) {
+  request
+    .get('/api/pictures')
+    .end(function (err, res) {
+      if (err) return console.log(err);
+      ctx.pictures = res.body;
+      next();
+    })
+}
+
+function loadPicturesAxios(ctx, next) {
+  axios
+    .get('/api/pictures')
+    .then(function (res) {
+      ctx.pictures = res.data;
+      next();
+    })
+    .catch(function (err) {
+      console.log(err);
+    })
+}
+
+function loadPicturesFetch(ctx, next) {
+  fetch('/api/pictures')
+    .then(function (res) {
+      return res.json();
+    })
+    .then(function (pictures) {
+      ctx.pictures = pictures;
+      next()
+      .catch(function (err) {
+        console.log(err);
+      })
+    })
+}
 
 async function asyncLoad(ctx, next) {
   try {
